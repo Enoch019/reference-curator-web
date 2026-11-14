@@ -39,6 +39,9 @@ jobs:
         if: steps.pages_check.outputs.ready == 'true'
         with:
           ref: main
+      - name: Validate dashboard JavaScript
+        if: steps.pages_check.outputs.ready == 'true'
+        run: node --check site/app.js
       - uses: actions/configure-pages@v5
         if: steps.pages_check.outputs.ready == 'true'
       - uses: actions/upload-pages-artifact@v3
