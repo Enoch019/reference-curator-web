@@ -352,6 +352,29 @@
     }
   }
 
+  function testDelivery() {
+    // Static GitHub Pages cannot call private Actions or hold an API token.
+    // A signed-in, authorized collaborator submits a public test request.
+    var id = value("topicId");
+    if (!/^[a-z][a-z0-9_]{2,63}$/.test(id)) {
+      notify("유효한 Topic ID를 먼저 선택하세요.", true);
+      return;
+    }
+    var params = new URLSearchParams();
+    params.set("template", "reference-test.yml");
+    params.set("title", "[Curator Test] " + id);
+    params.set("topic", id);
+    var url = REPO + "/issues/new?" + params.toString();
+    var opened = window.open(url, "_blank");
+    if (opened) {
+      try { opened.opener = null; } catch (_error) {}
+      notify("GitHub에서 테스트 요청 Issue를 제출하세요. 약 15분 간격으로 처리되며 실제 Discord 발송과 API 비용이 발생합니다. 저장된 설정으로 실행됩니다.");
+    } else {
+      // Mobile in-app browsers sometimes block new tabs.
+      window.location.href = url;
+    }
+  }
+
   function exportConfig() {
     try {
       var payload = buildSubmission(true);
@@ -414,6 +437,8 @@
   el("configFile").addEventListener("change", importConfig);
   el("exportBtn").addEventListener("click", exportConfig);
   el("saveTop").addEventListener("click", save);
+  el("testTop").addEventListener("click", testDelivery);
+  el("testBottom").addEventListener("click", testDelivery);
   el("saveBottom").addEventListener("click", save);
   el("closeModal").addEventListener("click", function () { el("modal").hidden = true; });
   el("modal").addEventListener("click", function (ev) { if (ev.target === el("modal")) el("modal").hidden = true; });
