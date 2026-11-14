@@ -1,7 +1,7 @@
 (function () {
   "use strict";
 
-  var REPO = "https://github.com/Enoch019/reference-curator-web-web";
+  var REPO = "https://github.com/Enoch019/reference-curator-web";
   var SOURCES = ["artstation", "pinterest", "behance", "flickr"];
   var TEXT_FIELDS = ["label", "direction", "period", "architecture", "materials", "lighting", "palette"];
   var DEFAULT_ROLES = {
