@@ -256,7 +256,8 @@
     el("reviewStrictness").textContent = String(p.vision_strictness || "balanced").toUpperCase() + " · " + state.cfg.vision.max_candidates + " CANDIDATES";
     el("reviewResolution").textContent = state.cfg.minimum_image_width + " × " + state.cfg.minimum_image_height;
     el("reviewActive").textContent = draft.activate ? "ACTIVATE ON SAVE" : "KEEP CURRENT ACTIVE TOPIC";
-    var summary = "**topic : " + (p.label || state.selectedId) + "**\n\n";
+    var editUrl = "https://enoch019.github.io/reference-curator-web/?topic=" + encodeURIComponent(value("topicId") || state.selectedId);
+    var summary = "**topic : " + (p.label || state.selectedId) + "** - [토픽 수정](" + editUrl + ")\n\n";
     summary += "1. [Source] Selected silhouette reference\n";
     summary += "2. [Source] Selected architecture reference\n";
     summary += "3. [Source] Selected atmosphere reference";
