@@ -27,7 +27,22 @@
         "rocky coastal cliffs sea stacks photography",
         "stormy ocean waves rocky shore photography",
         "coastal rock formations overcast landscape photography"
-      ]
+      ],
+      "direction": "Collect detailed visual references for coastal cliffs with realistic materials and usable forms.",
+      "fantasy_intensity": 1,
+      "vision_strictness": "balanced",
+      "period": "",
+      "architecture": "",
+      "materials": "",
+      "lighting": "",
+      "palette": "",
+      "include": [],
+      "exclude": [],
+      "roles": {
+        "silhouette": "Wide-angle view emphasizing overall form, silhouette and spatial hierarchy.",
+        "architecture": "Close-up reference emphasizing authentic structural details and materials.",
+        "atmosphere": "Environmental reference emphasizing lighting, weather, scale and mood."
+      }
     },
     "medieval_architecture": {
       "label": "중세 건축 · 석조 구조",
