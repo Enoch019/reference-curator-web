@@ -1,0 +1,20 @@
+name: "Reference Curator · Web Dashboard Save"
+description: "웹 대시보드에서 만든 설정을 안전하게 config.json에 반영합니다."
+title: "[Curator Web] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Reference Curator — Dashboard Submission
+        웹사이트가 생성한 설정 JSON입니다. 저장소 소유자 또는 초대된 쓰기 권한 협업자의 제출만 적용됩니다.
+        내용을 검토한 뒤 **Submit new issue**를 누르면 GitHub Actions가 적용합니다.
+        API 키나 Discord 웹훅 URL을 붙여넣지 마세요.
+  - type: textarea
+    id: payload
+    attributes:
+      label: "Configuration JSON"
+      description: "웹 대시보드에서 자동 입력하거나 복사한 JSON을 그대로 붙여넣으세요."
+      render: json
+      placeholder: '{"version":1,"topic_id":"gothic_fantasy_castles","profile":{...}}'
+    validations:
+      required: true

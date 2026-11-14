@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>Reference Curator — Control Room</title>
+  <meta name="description" content="Visual reference topics, discovery sources and AI evaluation settings.">
+  <link rel="stylesheet" href="./style.css">
+  <script defer src="./bootstrap.js"></script>
+  <script defer src="./app.js"></script>
+</head>
+<body>
+  <div class="app">
+    <header class="masthead">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span><span></span></span>
+        <div class="brand-copy"><span class="brand-name">REFERENCE<span class="accent">/</span>CURATOR</span><span class="brand-sub">VISUAL DISCOVERY SYSTEM</span></div>
+      </div>
+      <div class="mast-right"><span class="live-dot" aria-hidden="true"></span><span class="mast-tag">CONFIGURATION MODE</span><a class="header-link" href="https://github.com/Enoch019/reference-curator-web-web/actions" target="_blank" rel="noopener noreferrer">ACTIONS <span aria-hidden="true">↗</span></a></div>
+    </header>
+
+    <div class="shell">
+      <aside class="sidebar" aria-label="토픽 선택">
+        <div class="side-head"><span class="eyebrow">WORKSPACE / 01</span><h2>Topics <span id="topicCount" class="count">00</span></h2></div>
+        <div class="topic-list" id="topicList"></div>
+        <button type="button" class="new-topic" id="newTopic"><span class="plus">+</span> CREATE TOPIC</button>
+        <div class="side-tools">
+          <span class="eyebrow">CONFIGURATION</span>
+          <button class="side-tool" type="button" id="importBtn"><span aria-hidden="true">↥</span> Import config.json</button>
+          <button class="side-tool" type="button" id="exportBtn"><span aria-hidden="true">↧</span> Export config.json</button>
+          <input id="configFile" type="file" accept=".json,application/json" hidden>
+        </div>
+        <div class="side-footer"><span>01 — DEFINE</span><span>02 — DISCOVER</span><span>03 — DELIVER</span></div>
+      </aside>
+
+      <main class="main">
+        <div class="workspace-head">
+          <div><span class="eyebrow">CONTROL ROOM / ART DIRECTION</span><h1 id="heroTitle">Define the <em>vision.</em></h1><p class="lead">레퍼런스의 시각적 방향과 검색·선별 기준을 한곳에서 설계합니다.</p></div>
+          <div class="head-actions"><button type="button" class="button subtle" id="duplicateTopic">DUPLICATE</button><button type="button" class="button primary" id="saveTop">SAVE TO GITHUB <span aria-hidden="true">↗</span></button></div>
+        </div>
+
+        <div class="notice"><span class="notice-icon">i</span><span>GitHub에 초대된 협업자가 Issue로 제출하면 Actions가 설정을 적용합니다. <strong>웹페이지에 API 키나 웹훅 URL을 입력하지 마세요.</strong></span></div>
+
+        <div class="tabbar" role="tablist" aria-label="설정 카테고리">
+          <button type="button" role="tab" aria-selected="true" data-tab="direction" id="tab-direction">01 <span>ART DIRECTION</span></button>
+          <button type="button" role="tab" aria-selected="false" data-tab="sources" id="tab-sources">02 <span>DISCOVERY SOURCES</span></button>
+          <button type="button" role="tab" aria-selected="false" data-tab="vision" id="tab-vision">03 <span>VISION & DELIVERY</span></button>
+          <button type="button" role="tab" aria-selected="false" data-tab="review" id="tab-review">04 <span>REVIEW</span></button>
+        </div>
+
+        <form id="editor" novalidate>
+          <section class="panel active" id="panel-direction" role="tabpanel" aria-labelledby="tab-direction">
+            <div class="section-title"><span class="section-no">01 /</span><div><h2>Visual identity</h2><p>무엇을 찾을지보다, 왜 이 레퍼런스가 필요한지를 정의합니다.</p></div></div>
+            <div class="field-grid two">
+              <label class="field"><span class="label">TOPIC ID <span class="required">*</span></span><input id="topicId" autocomplete="off" spellcheck="false" maxlength="64" placeholder="gothic_fantasy_castles"><small>영문 소문자·숫자·밑줄. 저장 후 변경 시 새 토픽으로 생성됩니다.</small></label>
+              <label class="field"><span class="label">DISPLAY NAME <span class="required">*</span></span><input id="label" maxlength="90" placeholder="고딕 성채 · 어두운 중세 판타지"></label>
+            </div>
+            <label class="field"><span class="label">VISUAL DIRECTION <span class="required">*</span></span><textarea id="direction" rows="6" maxlength="2000" placeholder="원하는 미적 방향, 용도, 제작 맥락을 자세하게 설명하세요."></textarea></label>
+            <div class="field-grid two">
+              <label class="field"><span class="label">ERA & CULTURE</span><input id="period" maxlength="2000" placeholder="12th–15th century Europe"></label>
+              <div class="field fantasy"><div class="label-row"><label class="label" for="fantasy">FANTASY INTENSITY</label><output id="fantasyValue" for="fantasy">1 / SUBTLE</output></div><input id="fantasy" type="range" min="0" max="3" step="1" value="1"><div class="range-ends"><span>HISTORICAL</span><span>HIGH FANTASY</span></div></div>
+            </div>
+            <div class="field-grid two">
+              <label class="field"><span class="label">ARCHITECTURE & SHAPES</span><textarea id="architecture" maxlength="2000" rows="4" placeholder="Tower proportions, silhouette, arches..."></textarea></label>
+              <label class="field"><span class="label">MATERIALS & DETAILS</span><textarea id="materials" maxlength="2000" rows="4" placeholder="Granite, slate, masonry, weathering..."></textarea></label>
+              <label class="field"><span class="label">LIGHTING & WEATHER</span><textarea id="lighting" maxlength="2000" rows="3" placeholder="Cold fog, overcast morning..."></textarea></label>
+              <label class="field"><span class="label">COLOR PALETTE</span><textarea id="palette" maxlength="2000" rows="3" placeholder="Desaturated stone gray, muted green..."></textarea></label>
+            </div>
+            <div class="field-grid two">
+              <label class="field"><span class="label">MUST INCLUDE <small>한 줄에 한 항목</small></span><textarea id="include" rows="5" placeholder="gothic pointed arches&#10;stone fortifications"></textarea></label>
+              <label class="field"><span class="label">MUST AVOID <small>한 줄에 한 항목</small></span><textarea id="exclude" rows="5" placeholder="cartoon&#10;neon glow"></textarea></label>
+            </div>
+            <div class="section-title compact"><span class="section-no">SLOTS /</span><div><h2>Reference roles</h2><p>세 가지 관점에서 서로 다른 이미지를 선별합니다.</p></div></div>
+            <div class="roles">
+              <label class="field role"><span class="role-num">01</span><span class="label">SILHOUETTE <span class="required">*</span></span><textarea id="silhouette" rows="4" maxlength="2000"></textarea></label>
+              <label class="field role"><span class="role-num">02</span><span class="label">ARCHITECTURE <span class="required">*</span></span><textarea id="roleArchitecture" rows="4" maxlength="2000"></textarea></label>
+              <label class="field role"><span class="role-num">03</span><span class="label">ATMOSPHERE <span class="required">*</span></span><textarea id="atmosphere" rows="4" maxlength="2000"></textarea></label>
+            </div>
+          </section>
+
+          <section class="panel" id="panel-sources" role="tabpanel" aria-labelledby="tab-sources" hidden>
+            <div class="section-title"><span class="section-no">02 /</span><div><h2>Discovery sources</h2><p>사이트별로 서로 다른 검색어를 설정할 수 있습니다. 검색어는 영어를 권장합니다.</p></div></div>
+            <div class="source-grid">
+              <div class="source-card" data-source="artstation"><div class="source-head"><div><span class="source-index">01 / PORTFOLIOS</span><h3>ArtStation</h3></div><label class="switch" aria-label="ArtStation 사용"><input type="checkbox" data-enabled="artstation"><span></span></label></div><p>게임 환경·컨셉 아트·3D 제작 사례</p><label class="field"><span class="label">SEARCH QUERIES <small>최대 8개 · 줄바꿈 구분</small></span><textarea data-queries="artstation" rows="7" spellcheck="false"></textarea></label><span class="source-count" id="count-artstation">0 QUERIES</span></div>
+              <div class="source-card" data-source="pinterest"><div class="source-head"><div><span class="source-index">02 / VISUAL REFERENCES</span><h3>Pinterest</h3></div><label class="switch" aria-label="Pinterest 사용"><input type="checkbox" data-enabled="pinterest"><span></span></label></div><p>실제 구조·재질·실루엣 이미지</p><label class="field"><span class="label">SEARCH QUERIES <small>최대 8개 · 줄바꿈 구분</small></span><textarea data-queries="pinterest" rows="7" spellcheck="false"></textarea></label><span class="source-count" id="count-pinterest">0 QUERIES</span></div>
+              <div class="source-card" data-source="behance"><div class="source-head"><div><span class="source-index">03 / DESIGN PROJECTS</span><h3>Behance</h3></div><label class="switch" aria-label="Behance 사용"><input type="checkbox" data-enabled="behance"><span></span></label></div><p>프로젝트·환경 디자인·작업 과정</p><label class="field"><span class="label">SEARCH QUERIES <small>최대 8개 · 줄바꿈 구분</small></span><textarea data-queries="behance" rows="7" spellcheck="false"></textarea></label><span class="source-count" id="count-behance">0 QUERIES</span></div>
+              <div class="source-card" data-source="flickr"><div class="source-head"><div><span class="source-index">04 / PHOTOGRAPHY</span><h3>Flickr</h3></div><label class="switch" aria-label="Flickr 사용"><input type="checkbox" data-enabled="flickr"><span></span></label></div><p>실제 장소의 건축 사진·현장 분위기</p><label class="field"><span class="label">SEARCH QUERIES <small>최대 8개 · 줄바꿈 구분</small></span><textarea data-queries="flickr" rows="7" spellcheck="false"></textarea></label><span class="source-count" id="count-flickr">0 QUERIES</span></div>
+            </div>
+            <p class="help-line">검색 소스는 최소 1개 필요합니다. 꺼진 소스의 검색어는 편집기에 남지만 저장 시 비활성화됩니다.</p>
+          </section>
+
+          <section class="panel" id="panel-vision" role="tabpanel" aria-labelledby="tab-vision" hidden>
+            <div class="section-title"><span class="section-no">03 /</span><div><h2>Vision & delivery</h2><p>AI 평가 강도와 이미지 다운로드 조건을 설정합니다.</p></div></div>
+            <div class="settings-stack">
+              <div class="setting-row"><div><h3>AI Vision evaluation</h3><p>시각적 방향·주제 적합성을 AI로 평가합니다. API 비용이 발생할 수 있습니다.</p></div><label class="switch" aria-label="Vision 사용"><input type="checkbox" id="visionEnabled"><span></span></label></div>
+              <div class="setting-row"><div><h3>Vision strictness</h3><p>선별된 이미지의 시각적 기준을 조절합니다. 토픽마다 따로 저장됩니다.</p></div><select id="strictness"><option value="relaxed">RELAXED</option><option value="balanced">BALANCED</option><option value="strict">STRICT</option></select></div>
+              <div class="setting-row"><div><h3>Vision review budget</h3><p>한 번 실행할 때 AI가 평가할 최대 이미지 수. 실제 전송은 최대 3장입니다.</p></div><select id="maxCandidates"><option value="3">3 CANDIDATES</option><option value="4">4 CANDIDATES</option><option value="5">5 CANDIDATES</option><option value="6">6 CANDIDATES</option><option value="7">7 CANDIDATES</option></select></div>
+              <div class="setting-row"><div><h3>Minimum image resolution</h3><p>다운로드한 실제 이미지 크기를 기준으로 검사합니다.</p></div><div class="dimension-inputs"><label><span>WIDTH</span><input id="minWidth" type="number" min="64" max="4096" step="1"></label><span class="dimension-by">×</span><label><span>HEIGHT</span><input id="minHeight" type="number" min="64" max="4096" step="1"></label></div></div>
+              <div class="setting-row"><div><h3>Activate this topic</h3><p>저장 후 다음 정기 실행부터 이 토픽을 사용합니다.</p></div><label class="switch" aria-label="이 토픽 활성화"><input type="checkbox" id="activate"><span></span></label></div>
+            </div>
+            <div class="info-panel"><strong>SECURITY / PRIVACY</strong><p>API 키는 GitHub Actions Secrets에만 보관됩니다. 웹사이트는 비밀키를 읽거나 저장하지 않습니다. 공개 호스팅 시에는 토픽 설명과 검색어가 공개될 수 있으니 주의하세요.</p></div>
+          </section>
+
+          <section class="panel" id="panel-review" role="tabpanel" aria-labelledby="tab-review" hidden>
+            <div class="section-title"><span class="section-no">04 /</span><div><h2>Before you publish</h2><p>GitHub에 제출할 설정을 간단히 확인하세요.</p></div></div>
+            <div class="review-grid"><div class="review-card"><span>TOPIC</span><strong id="reviewName">—</strong><small id="reviewId">—</small></div><div class="review-card"><span>SEARCH SOURCES</span><strong id="reviewSources">—</strong><small id="reviewQueries">—</small></div><div class="review-card"><span>VISION</span><strong id="reviewVision">—</strong><small id="reviewStrictness">—</small></div><div class="review-card"><span>IMAGE RESOLUTION</span><strong id="reviewResolution">—</strong><small id="reviewActive">—</small></div></div>
+            <div class="discord-preview"><div class="preview-top"><span class="preview-mark">R</span><div><strong>Reference Curator</strong><small>DISCORD PREVIEW · TEXT STRUCTURE ONLY</small></div></div><div id="discordPreview" class="preview-body"></div><div class="preview-images"><span>01 / SILHOUETTE</span><span>02 / ARCHITECTURE</span><span>03 / ATMOSPHERE</span></div><p>실제 이미지가 아닌 전송 메시지 구조 예시입니다. 실제 게시 이미지 수는 평가 결과에 따라 달라집니다.</p></div>
+            <div class="save-panel"><div><strong>READY TO SAVE?</strong><p>GitHub에서 내용 확인 후 Issue를 제출하면 설정이 적용됩니다.</p></div><button class="button primary" type="button" id="saveBottom">OPEN GITHUB SAVE <span aria-hidden="true">↗</span></button></div>
+          </section>
+        </form>
+        <footer class="bottom-bar"><span>REFERENCE CURATOR / CONTROL ROOM</span><span>LOCAL-FIRST · NO API KEYS IN BROWSER</span><a href="https://github.com/Enoch019/reference-curator-web" target="_blank" rel="noopener noreferrer">SOURCE ↗</a></footer>
+      </main>
+    </div>
+  </div>
+
+  <div id="modal" class="modal-backdrop" hidden><div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal-head"><span class="eyebrow">GITHUB SUBMISSION</span><button id="closeModal" type="button" aria-label="닫기">×</button></div><h2 id="modalTitle">GitHub에서 저장 마무리</h2><p id="modalHint">Issue 양식에 아래 JSON을 붙여넣고 제출하세요.</p><textarea id="payloadOutput" readonly spellcheck="false" aria-label="Configuration JSON"></textarea><div class="modal-buttons"><button class="button subtle" type="button" id="copyPayload">COPY JSON</button><a class="button primary" id="openIssue" href="https://github.com/Enoch019/reference-curator-web-web/issues/new?template=reference-dashboard.yml" target="_blank" rel="noopener noreferrer">OPEN ISSUE FORM ↗</a></div></div></div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

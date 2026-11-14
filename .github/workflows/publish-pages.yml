@@ -1,0 +1,50 @@
+name: Publish Reference Curator Web
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'site/**'
+      - '.github/workflows/publish-pages.yml'
+  workflow_run:
+    workflows: ['Apply Shared Reference Topic']
+    types: [completed]
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: shared-pages
+  cancel-in-progress: true
+jobs:
+  deploy:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Check Pages configuration
+        id: pages_check
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if gh api "repos/$GITHUB_REPOSITORY/pages" >/dev/null 2>&1; then
+            echo 'ready=true' >> "$GITHUB_OUTPUT"
+          else
+            echo '::notice::Enable Settings > Pages > Source: GitHub Actions, then manually run this workflow.'
+            echo 'ready=false' >> "$GITHUB_OUTPUT"
+          fi
+      - uses: actions/checkout@v4
+        if: steps.pages_check.outputs.ready == 'true'
+        with:
+          ref: main
+      - uses: actions/configure-pages@v5
+        if: steps.pages_check.outputs.ready == 'true'
+      - uses: actions/upload-pages-artifact@v3
+        if: steps.pages_check.outputs.ready == 'true'
+        with:
+          path: site
+      - uses: actions/deploy-pages@v4
+        if: steps.pages_check.outputs.ready == 'true'
+        id: deployment
