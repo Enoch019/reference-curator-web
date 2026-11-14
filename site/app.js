@@ -360,6 +360,10 @@
       notify("유효한 Topic ID를 먼저 선택하세요.", true);
       return;
     }
+    if (!Object.prototype.hasOwnProperty.call(initial.topics, id)) {
+      notify("아직 저장되지 않은 토픽입니다. 먼저 SAVE TO GITHUB으로 저장한 뒤 페이지를 새로고침하세요.", true);
+      return;
+    }
     var params = new URLSearchParams();
     params.set("template", "reference-test.yml");
     params.set("title", "[Curator Test] " + id);
