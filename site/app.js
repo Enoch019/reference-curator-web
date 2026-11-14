@@ -60,8 +60,11 @@
     drafts: {},
     tab: "direction"
   };
-  state.selectedId = Object.prototype.hasOwnProperty.call(state.cfg.topics, state.cfg.active_topic)
-    ? state.cfg.active_topic : Object.keys(state.cfg.topics)[0];
+  var requestedTopic = new URLSearchParams(window.location.search).get("topic");
+  state.selectedId = requestedTopic && Object.prototype.hasOwnProperty.call(state.cfg.topics, requestedTopic)
+    ? requestedTopic
+    : (Object.prototype.hasOwnProperty.call(state.cfg.topics, state.cfg.active_topic)
+      ? state.cfg.active_topic : Object.keys(state.cfg.topics)[0]);
 
   function starterProfile(topicId) {
     var name = topicId.replace(/_/g, " ");
@@ -277,6 +280,9 @@
     if (id === state.selectedId) return;
     readEditor();
     state.selectedId = id;
+    var url = new URL(window.location.href);
+    url.searchParams.set("topic", id);
+    window.history.replaceState(null, "", url);
     renderTopics();
     loadEditor();
   }
