@@ -28,4 +28,4 @@ Github may delay or skip scheduled poll cycles, and an Action may wait in a queu
 In the **DISCOVERY SOURCES** tab, YouTube has its own enable switch and up to eight search queries per topic.
 The collector uses the already-configured Serper search key (standard Google web / organic results), validates YouTube watch/short links, derives the video ID, and downloads the video's public poster image using `i.ytimg.com` (max resolution when available, otherwise `hqdefault.jpg`).
 It sends the thumbnail as a Discord attachment and a clickable **YouTube – video title** link to the video. Video frames, audio, transcripts, and the full video are **not** downloaded or assessed. The thumbnail goes through the existing static-image Vision check, deduplication, download limits, and one-time retry.
-For the `wind_vfx` topic, eight YouTube searches cover Unity VFX Graph, Unreal Niagara, Houdini wind FX, air slashes, gusts, vortexes, particle trails, and wind-blown debris.
+For the active `eightbit_fx` topic, eight YouTube searches cover retro pixel-art effects, hit sparks, explosions, spell animation, sword slashes, sprite-sheet breakdowns and RPG battle VFX.
