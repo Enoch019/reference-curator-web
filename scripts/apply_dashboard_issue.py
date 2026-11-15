@@ -10,7 +10,7 @@ import re
 from copy import deepcopy
 
 TOPIC_ID = re.compile(r"^[a-z][a-z0-9_]{2,63}$")
-SOURCES = ("artstation", "pinterest", "behance", "flickr")
+SOURCES = ("artstation", "pinterest", "behance", "flickr", "youtube")
 ROLE_NAMES = ("silhouette", "architecture", "atmosphere")
 PROFILE_TEXT = ("period", "architecture", "materials", "lighting", "palette")
 JSON_HEADING = re.compile(r"(?ms)^### Configuration JSON\s*\n(.*?)(?=^### |\Z)")
