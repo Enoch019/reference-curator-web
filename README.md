@@ -21,3 +21,11 @@ The test consumes API credits and may send an additional Discord message. Public
 
 The private request poller is in `Enoch019/reference-curator/.github/workflows/test-request.yml`.
 Github may delay or skip scheduled poll cycles, and an Action may wait in a queue.
+
+
+## YouTube video references
+
+In the **DISCOVERY SOURCES** tab, YouTube has its own enable switch and up to eight search queries per topic.
+The collector uses the already-configured Serper search key (standard Google web / organic results), validates YouTube watch/short links, derives the video ID, and downloads the video's public poster image using `i.ytimg.com` (max resolution when available, otherwise `hqdefault.jpg`).
+It sends the thumbnail as a Discord attachment and a clickable **YouTube – video title** link to the video. Video frames, audio, transcripts, and the full video are **not** downloaded or assessed. The thumbnail goes through the existing static-image Vision check, deduplication, download limits, and one-time retry.
+For the `water_vfx` topic, eight searches covering Unity VFX Graph, Unreal Niagara, Houdini water FX, splashes, foam and ripples are enabled by default.
