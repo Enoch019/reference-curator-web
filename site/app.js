@@ -353,29 +353,44 @@
   }
 
   function testDelivery() {
-    // Static GitHub Pages cannot call private Actions or hold an API token.
-    // A signed-in, authorized collaborator submits a public test request.
+    // GitHub authenticates collaborators when they run the public workflow.
+    // The private collector polls successful dispatch runs, with no PAT in Pages.
     var id = value("topicId");
     if (!/^[a-z][a-z0-9_]{2,63}$/.test(id)) {
       notify("유효한 Topic ID를 먼저 선택하세요.", true);
       return;
     }
     if (!Object.prototype.hasOwnProperty.call(initial.topics, id)) {
-      notify("아직 저장되지 않은 토픽입니다. 먼저 SAVE TO GITHUB으로 저장한 뒤 페이지를 새로고침하세요.", true);
+      notify("아직 저장되지 않은 토픽입니다. 먼저 SAVE TO GITHUB으로 저장한 뒤 새로고침하세요.", true);
       return;
     }
-    var params = new URLSearchParams();
-    params.set("template", "reference-test.yml");
-    params.set("title", "[Curator Test] " + id);
-    params.set("topic", id);
-    var url = REPO + "/issues/new?" + params.toString();
+    var url = REPO + "/actions/workflows/request-test.yml";
+    // Try to copy the selected topic. On iOS some in-app browsers may deny it.
+    var copyRequest = null;
+    try {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        copyRequest = navigator.clipboard.writeText(id);
+      }
+    } catch (_error) {
+      copyRequest = null;
+    }
     var opened = window.open(url, "_blank");
     if (opened) {
       try { opened.opener = null; } catch (_error) {}
-      notify("GitHub에서 테스트 요청 Issue를 제출하세요. 약 15분 간격으로 처리되며 실제 Discord 발송과 API 비용이 발생합니다. 저장된 설정으로 실행됩니다.");
     } else {
-      // Mobile in-app browsers sometimes block new tabs.
       window.location.href = url;
+      return;
+    }
+    var instructions = "GitHub의 Run workflow에서 Topic ID에 '" + id +
+      "'를 입력하고 Run workflow를 누르세요. 테스트가 접수되면 약 15분 간격으로 Discord 발송을 확인합니다.";
+    if (copyRequest && typeof copyRequest.then === "function") {
+      copyRequest.then(function () {
+        notify("토픽 ID 복사 완료! " + instructions);
+      }).catch(function () {
+        notify(instructions);
+      });
+    } else {
+      notify(instructions);
     }
   }
 
