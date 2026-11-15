@@ -42,7 +42,8 @@
         "silhouette": "Wide-angle view emphasizing overall form, silhouette and spatial hierarchy.",
         "architecture": "Close-up reference emphasizing authentic structural details and materials.",
         "atmosphere": "Environmental reference emphasizing lighting, weather, scale and mood."
-      }
+      },
+      "youtube": []
     },
     "medieval_architecture": {
       "label": "중세 건축 · 석조 구조",
@@ -65,7 +66,8 @@
         "medieval stone bridge architecture photography",
         "gothic chapel ruins stone masonry detail",
         "medieval village timber frame architecture photography"
-      ]
+      ],
+      "youtube": []
     },
     "gothic_fantasy_castles": {
       "label": "고딕 성채 · 어두운 중세 판타지",
@@ -133,7 +135,8 @@
         "castle gatehouse stone masonry detail",
         "medieval castle mist landscape photography",
         "gothic abbey ruins stone architecture"
-      ]
+      ],
+      "youtube": []
     },
     "water_vfx": {
       "label": "물 이펙트 · 파티클 · 게임 VFX",
@@ -205,6 +208,16 @@
         "water ripple rings raindrops macro",
         "waterfall spray mist closeup",
         "underwater bubbles water turbulence"
+      ],
+      "youtube": [
+        "stylized water splash VFX demo breakdown",
+        "Unreal Niagara water particles impact effect",
+        "Unity VFX Graph water splash tutorial showcase",
+        "realistic ocean wave foam game shader VFX",
+        "stylized water magic spell particle effect",
+        "waterfall water stream particle VFX breakdown",
+        "Houdini water simulation game realtime VFX",
+        "water ripple caustics shader graph game demo"
       ]
     }
   },
