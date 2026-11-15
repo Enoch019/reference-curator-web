@@ -8,7 +8,7 @@
   <meta name="description" content="Visual reference topics, discovery sources and AI evaluation settings.">
   <link rel="stylesheet" href="./style.css">
   <script defer src="./bootstrap.js"></script>
-  <script defer src="./app.js?v=workflow-dispatch-1"></script>
+  <script defer src="./app.js?v=youtube-source-1"></script>
 </head>
 <body>
   <div class="app">
@@ -80,12 +80,13 @@
           </section>
 
           <section class="panel" id="panel-sources" role="tabpanel" aria-labelledby="tab-sources" hidden>
-            <div class="section-title"><span class="section-no">02 /</span><div><h2>Discovery sources</h2><p>사이트별로 서로 다른 검색어를 설정할 수 있습니다. 검색어는 영어를 권장합니다.</p></div></div>
+            <div class="section-title"><span class="section-no">02 /</span><div><h2>Discovery sources</h2><p>ArtStation·Pinterest·Behance·Flickr·YouTube별 검색어를 설정합니다. YouTube는 영상 썸네일과 원본 링크를 보내며 검색어는 영어를 권장합니다.</p></div></div>
             <div class="source-grid">
               <div class="source-card" data-source="artstation"><div class="source-head"><div><span class="source-index">01 / PORTFOLIOS</span><h3>ArtStation</h3></div><label class="switch" aria-label="ArtStation 사용"><input type="checkbox" data-enabled="artstation"><span></span></label></div><p>게임 환경·컨셉 아트·3D 제작 사례</p><label class="field"><span class="label">SEARCH QUERIES <small>최대 8개 · 줄바꿈 구분</small></span><textarea data-queries="artstation" rows="7" spellcheck="false"></textarea></label><span class="source-count" id="count-artstation">0 QUERIES</span></div>
               <div class="source-card" data-source="pinterest"><div class="source-head"><div><span class="source-index">02 / VISUAL REFERENCES</span><h3>Pinterest</h3></div><label class="switch" aria-label="Pinterest 사용"><input type="checkbox" data-enabled="pinterest"><span></span></label></div><p>실제 구조·재질·실루엣 이미지</p><label class="field"><span class="label">SEARCH QUERIES <small>최대 8개 · 줄바꿈 구분</small></span><textarea data-queries="pinterest" rows="7" spellcheck="false"></textarea></label><span class="source-count" id="count-pinterest">0 QUERIES</span></div>
               <div class="source-card" data-source="behance"><div class="source-head"><div><span class="source-index">03 / DESIGN PROJECTS</span><h3>Behance</h3></div><label class="switch" aria-label="Behance 사용"><input type="checkbox" data-enabled="behance"><span></span></label></div><p>프로젝트·환경 디자인·작업 과정</p><label class="field"><span class="label">SEARCH QUERIES <small>최대 8개 · 줄바꿈 구분</small></span><textarea data-queries="behance" rows="7" spellcheck="false"></textarea></label><span class="source-count" id="count-behance">0 QUERIES</span></div>
               <div class="source-card" data-source="flickr"><div class="source-head"><div><span class="source-index">04 / PHOTOGRAPHY</span><h3>Flickr</h3></div><label class="switch" aria-label="Flickr 사용"><input type="checkbox" data-enabled="flickr"><span></span></label></div><p>실제 장소의 건축 사진·현장 분위기</p><label class="field"><span class="label">SEARCH QUERIES <small>최대 8개 · 줄바꿈 구분</small></span><textarea data-queries="flickr" rows="7" spellcheck="false"></textarea></label><span class="source-count" id="count-flickr">0 QUERIES</span></div>
+              <div class="source-card" data-source="youtube"><div class="source-head"><div><span class="source-index">05 / VIDEO REFERENCES</span><h3>YouTube</h3></div><label class="switch" aria-label="YouTube 사용"><input type="checkbox" data-enabled="youtube"><span></span></label></div><p>게임 VFX 시연·제작 과정·튜토리얼 영상. 대표 썸네일을 이미지로 첨부하고 영상 링크를 전달합니다.</p><label class="field"><span class="label">VIDEO SEARCH QUERIES <small>최대 8개 · 줄바꿈 구분</small></span><textarea data-queries="youtube" rows="7" spellcheck="false"></textarea></label><span class="source-count" id="count-youtube">0 QUERIES</span></div>
             </div>
             <p class="help-line">검색 소스는 최소 1개 필요합니다. 꺼진 소스의 검색어는 편집기에 남지만 저장 시 비활성화됩니다.</p>
           </section>
