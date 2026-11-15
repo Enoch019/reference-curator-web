@@ -1,5 +1,5 @@
 {
-  "active_topic": "gothic_fantasy_castles",
+  "active_topic": "water_vfx",
   "max_results": 3,
   "minimum_image_width": 480,
   "minimum_image_height": 320,
@@ -133,6 +133,78 @@
         "castle gatehouse stone masonry detail",
         "medieval castle mist landscape photography",
         "gothic abbey ruins stone architecture"
+      ]
+    },
+    "water_vfx": {
+      "label": "물 이펙트 · 파티클 · 게임 VFX",
+      "direction": "Find visually useful WATER VFX references for building effects in games, covering BOTH stylized and physically realistic looks, 2D and 3D. Water itself must be the focus. Prioritize real-time game effects, demos, motion breakdowns, particle and shader techniques, effect spritesheets, and clear images of dynamic liquid behavior. Include splashes, impacts, ripples, waves, foam, bubbles, droplets, spray, flowing water, waterfalls, wakes, caustics, underwater effects, and water-themed magic. Real water photography is welcome when it clearly illustrates useful water motion, shape, or material behavior. Do not demand a particular art style, engine, era, or fantasy setting.",
+      "fantasy_intensity": 1,
+      "period": "Any setting, genre, era or game art style. Stylized, realistic, magical and natural water effects are equally valid.",
+      "architecture": "Effect anatomy and implementation cues: emitter and particle layering, fluid or mesh silhouette, splash arcs, ripple propagation, foam masks, wake ribbons, UV distortion, flipbook animation, Niagara, Unity VFX Graph, Shader Graph or Houdini breakdowns. The term architecture refers to VFX construction, not buildings.",
+      "materials": "Water surface shading, refraction/reflection, Fresnel, transparency, roughness variation, foam breakup, droplets, spray, bubbles, animated normals, flow maps, caustics, distortion and flipbook textures.",
+      "lighting": "Any lighting that makes the water motion, volume or material readable; hard backlight on droplets, soft translucency, sunlight on foam, underwater caustics, stylized bright accents or dramatic spell lighting are all useful.",
+      "palette": "No fixed palette: natural clear/cyan/teal/deep blue water, gray sea foam, painterly stylized colors and fantastical spell palettes are all acceptable.",
+      "include": [
+        "game-ready water VFX and particle effects",
+        "splashes, impacts, droplets and spray",
+        "ripples, concentric rings and wakes",
+        "ocean waves, surf and foam",
+        "flowing water, waterfalls and streams",
+        "bubbles, underwater turbulence and caustics",
+        "stylized, realistic and magical water effects",
+        "real-time water shaders and animated materials",
+        "breakdowns, flipbooks, sprite sheets and particle studies",
+        "clear water shapes, motion or material behavior",
+        "Unity VFX Graph, Unreal Niagara and Houdini water demos"
+      ],
+      "exclude": [
+        "landscapes or architecture where water is only incidental",
+        "generic static beach, lake or ocean scenery without distinct water behavior",
+        "unrelated fire, smoke, lava, dust or other non-water effects",
+        "search-result UI, product advertisements and unrelated collages",
+        "blurry or unusable low-resolution image references",
+        "AI-generated work when explicitly disclosed as such"
+      ],
+      "roles": {
+        "silhouette": "Look for a readable water-effect shape: splash crown, impact plume, ripple rings, wave crest, jet, waterfall stream, wake, flowing ribbon or magical water attack. A clear frame from either realistic or stylized gameplay/VFX is useful.",
+        "architecture": "Look for how the effect is constructed: particle layers, emitter trajectories, flipbooks, sprite sheets, foam and flow-map masks, mesh-driven waves, caustics, refractive shaders, node graphs or a high-quality visual effect breakdown. The effect itself must be clearly visible.",
+        "atmosphere": "Look for expressive water materials and motion: translucent or reflective liquid, foamy breakup, light catching spray, underwater bubbles/caustics, turbulent wake, mist or magical glow. Any style is acceptable when water remains the primary subject."
+      },
+      "vision_strictness": "balanced",
+      "artstation": [
+        "stylized water splash game VFX breakdown",
+        "realistic water particle splash Unreal Niagara",
+        "Unity VFX Graph water ripple impact",
+        "game water shader foam caustics breakdown",
+        "stylized waterfall water stream VFX",
+        "ocean wave foam game realtime VFX",
+        "water magic spell particle FX game",
+        "water splash flipbook sprite sheet VFX"
+      ],
+      "pinterest": [
+        "game VFX stylized water splash",
+        "water effect flipbook sprite sheet",
+        "Unreal Niagara water impact VFX",
+        "stylized water shader foam VFX",
+        "water ripple magic spell VFX",
+        "game waterfall particle effect",
+        "realistic water splash VFX reference"
+      ],
+      "behance": [
+        "stylized water game VFX breakdown",
+        "realistic water splash simulation VFX",
+        "water magic spell effect animation",
+        "liquid particle splash 3d effects",
+        "water ripple shader VFX breakdown",
+        "waterfall wave foam game effects"
+      ],
+      "flickr": [
+        "high speed water splash photography",
+        "water droplet crown splash macro",
+        "crashing wave sea spray closeup",
+        "water ripple rings raindrops macro",
+        "waterfall spray mist closeup",
+        "underwater bubbles water turbulence"
       ]
     }
   },
