@@ -1,5 +1,5 @@
 {
-  "active_topic": "water_vfx",
+  "active_topic": "wind_vfx",
   "max_results": 3,
   "minimum_image_width": 480,
   "minimum_image_height": 320,
@@ -138,86 +138,90 @@
       ],
       "youtube": []
     },
-    "water_vfx": {
-      "label": "물 이펙트 · 파티클 · 게임 VFX",
-      "direction": "Find visually useful WATER VFX references for building effects in games, covering BOTH stylized and physically realistic looks, 2D and 3D. Water itself must be the focus. Prioritize real-time game effects, demos, motion breakdowns, particle and shader techniques, effect spritesheets, and clear images of dynamic liquid behavior. Include splashes, impacts, ripples, waves, foam, bubbles, droplets, spray, flowing water, waterfalls, wakes, caustics, underwater effects, and water-themed magic. Real water photography is welcome when it clearly illustrates useful water motion, shape, or material behavior. Do not demand a particular art style, engine, era, or fantasy setting.",
+    "wind_vfx": {
+      "label": "바람 이펙트 · 파티클 · 게임 VFX",
+      "direction": "Curate visually useful WIND and AIR VFX references for real-time games, whether stylized or realistic, 2D or 3D. Focus on visible manifestations of moving air, gusts, swirls, air currents, cyclones, tornadoes, wind magic, wind slashes, speed trails, pressure waves, and airflow interacting with leaves, cloth, grass, sand, snow, mist or light debris. Prioritize game VFX showcases, breakdowns, flipbooks, shader and particle studies, Unity VFX Graph, Unreal Niagara, Houdini, and clear gameplay-effect frames. Real wind photography or atmospheric footage is welcome only when movement of air is readable through environmental motion. Wind is often invisible: accept secondary particles, silhouettes, distortion and trails as convincing visual cues of airflow. Avoid fixed art-style or genre requirements.",
       "fantasy_intensity": 1,
-      "period": "Any setting, genre, era or game art style. Stylized, realistic, magical and natural water effects are equally valid.",
-      "architecture": "Effect anatomy and implementation cues: emitter and particle layering, fluid or mesh silhouette, splash arcs, ripple propagation, foam masks, wake ribbons, UV distortion, flipbook animation, Niagara, Unity VFX Graph, Shader Graph or Houdini breakdowns. The term architecture refers to VFX construction, not buildings.",
-      "materials": "Water surface shading, refraction/reflection, Fresnel, transparency, roughness variation, foam breakup, droplets, spray, bubbles, animated normals, flow maps, caustics, distortion and flipbook textures.",
-      "lighting": "Any lighting that makes the water motion, volume or material readable; hard backlight on droplets, soft translucency, sunlight on foam, underwater caustics, stylized bright accents or dramatic spell lighting are all useful.",
-      "palette": "No fixed palette: natural clear/cyan/teal/deep blue water, gray sea foam, painterly stylized colors and fantastical spell palettes are all acceptable.",
+      "period": "Any genre, time period or game art style. Both naturalistic airflow and stylized or magical wind effects are desirable.",
+      "architecture": "VFX construction: curved particle trajectories, vector fields, ribbon and trail renderers, particle spirals, vortex meshes, radial forces, flow maps, distortion, scrolling noise, flipbooks, turbulence, wind zones, vertex animation and secondary debris systems. Interpret architecture as effect structure, never buildings.",
+      "materials": "Soft wispy transparent particles, swirling leaves and debris, volumetric wind trails, air distortion and refraction, mist/sand/snow as airflow tracers, cloth and foliage motion, curl noise, shader-driven ribbons, stylized streak meshes and animated alpha masks.",
+      "lighting": "Strong backlit gust trails, readable edge highlights, contrasting background silhouettes, natural outdoor wind lighting, cinematic atmospheric rays and expressive magical glow are all acceptable; the motion and air-flow direction must remain legible.",
+      "palette": "No fixed palette. Transparent or pale white airflow, muted gray dust, leaf-green and autumn foliage, icy cyan, neutral wind streaks, or vibrant fantasy magic accents are all acceptable.",
       "include": [
-        "game-ready water VFX and particle effects",
-        "splashes, impacts, droplets and spray",
-        "ripples, concentric rings and wakes",
-        "ocean waves, surf and foam",
-        "flowing water, waterfalls and streams",
-        "bubbles, underwater turbulence and caustics",
-        "stylized, realistic and magical water effects",
-        "real-time water shaders and animated materials",
-        "breakdowns, flipbooks, sprite sheets and particle studies",
-        "clear water shapes, motion or material behavior",
-        "Unity VFX Graph, Unreal Niagara and Houdini water demos"
+        "game-ready wind VFX and air particle effects",
+        "air gusts, wind bursts and sweeping airflow",
+        "swirls, whirlwinds, vortexes and tornadoes",
+        "stylized wind magic and air slash attacks",
+        "ribbon particles, trails and speed streaks",
+        "airflow distortion, flow maps and curl noise",
+        "wind-blown leaves, grass, cloth and light debris",
+        "dust, snow or mist tracing a clear wind current",
+        "real-time Unity VFX Graph and Unreal Niagara breakdowns",
+        "Houdini wind simulations and particle studies",
+        "wind effect flipbooks, spritesheets and shaders",
+        "natural and stylized wind motion reference"
       ],
       "exclude": [
-        "landscapes or architecture where water is only incidental",
-        "generic static beach, lake or ocean scenery without distinct water behavior",
-        "unrelated fire, smoke, lava, dust or other non-water effects",
-        "search-result UI, product advertisements and unrelated collages",
-        "blurry or unusable low-resolution image references",
-        "AI-generated work when explicitly disclosed as such"
+        "static scenery where wind or air motion is not apparent",
+        "generic clouds, fog or smoke without visible wind-driven motion",
+        "unrelated fire, explosions, water splashes and liquid effects",
+        "standalone dust or smoke effects without airflow cues",
+        "weather reports, maps, forecasts and stock-icons",
+        "search result UI, product adverts and low-quality collages",
+        "blurry or unusable thumbnail references",
+        "AI-generated works when explicitly disclosed as such"
       ],
       "roles": {
-        "silhouette": "Look for a readable water-effect shape: splash crown, impact plume, ripple rings, wave crest, jet, waterfall stream, wake, flowing ribbon or magical water attack. A clear frame from either realistic or stylized gameplay/VFX is useful.",
-        "architecture": "Look for how the effect is constructed: particle layers, emitter trajectories, flipbooks, sprite sheets, foam and flow-map masks, mesh-driven waves, caustics, refractive shaders, node graphs or a high-quality visual effect breakdown. The effect itself must be clearly visible.",
-        "atmosphere": "Look for expressive water materials and motion: translucent or reflective liquid, foamy breakup, light catching spray, underwater bubbles/caustics, turbulent wake, mist or magical glow. Any style is acceptable when water remains the primary subject."
+        "silhouette": "Find a strong readable wind-effect silhouette: curved air slash, sudden gust, tornado funnel, whirling vortex, sweeping wind ribbon, spiral or turbulent impact burst. Prioritize dynamic direction and shape in a still image or video thumbnail.",
+        "architecture": "Find production-useful breakdowns showing how wind FX are constructed: directional particle emitters, Niagara/VFX Graph vector fields, curl noise, ribbon trails, displacement and distortion shaders, flipbooks or animated debris layers. Keep the finished effect visually evident.",
+        "atmosphere": "Find expressive air movement interacting with the environment: leaves, grass, sand, fabric, drifting mist, snow or dust clearly pushed by wind, or stylized magical airflow with cinematic trails and highlights. Wind must remain the primary subject."
       },
       "vision_strictness": "balanced",
       "artstation": [
-        "stylized water splash game VFX breakdown",
-        "realistic water particle splash Unreal Niagara",
-        "Unity VFX Graph water ripple impact",
-        "game water shader foam caustics breakdown",
-        "stylized waterfall water stream VFX",
-        "ocean wave foam game realtime VFX",
-        "water magic spell particle FX game",
-        "water splash flipbook sprite sheet VFX"
+        "stylized wind slash game VFX breakdown",
+        "air gust particle effect Unity VFX Graph",
+        "Unreal Niagara wind vortex tornado effect",
+        "stylized whirlwind magical air spell game VFX",
+        "wind ribbon trails real time game particle",
+        "air distortion gust shockwave shader VFX",
+        "Houdini wind debris particle simulation game",
+        "wind magic effect flipbook spritesheet VFX"
       ],
       "pinterest": [
-        "game VFX stylized water splash",
-        "water effect flipbook sprite sheet",
-        "Unreal Niagara water impact VFX",
-        "stylized water shader foam VFX",
-        "water ripple magic spell VFX",
-        "game waterfall particle effect",
-        "realistic water splash VFX reference"
+        "stylized wind VFX game particle effect",
+        "wind slash air magic effect spritesheet",
+        "whirlwind vortex particle VFX game",
+        "air gust effect ribbon trails VFX",
+        "windblown leaves particles game effects",
+        "tornado wind effect stylized VFX",
+        "wind shader distortion VFX reference",
+        "flowing air magic spell game effect"
       ],
       "behance": [
-        "stylized water game VFX breakdown",
-        "realistic water splash simulation VFX",
-        "water magic spell effect animation",
-        "liquid particle splash 3d effects",
-        "water ripple shader VFX breakdown",
-        "waterfall wave foam game effects"
+        "stylized wind spell game VFX breakdown",
+        "wind tornado air vortex particle effects",
+        "wind slash impact VFX animation",
+        "air flow ribbon trail game effects",
+        "realistic wind debris atmospheric simulation",
+        "wind magic effect game motion design"
       ],
       "flickr": [
-        "high speed water splash photography",
-        "water droplet crown splash macro",
-        "crashing wave sea spray closeup",
-        "water ripple rings raindrops macro",
-        "waterfall spray mist closeup",
-        "underwater bubbles water turbulence"
+        "windblown autumn leaves motion photography",
+        "wind flowing tall grass field photography",
+        "dust devil whirlwind motion photography",
+        "strong wind storm flying debris photography",
+        "wind blown snow drifting photography",
+        "windswept flags fabric movement photography"
       ],
       "youtube": [
-        "stylized water splash VFX demo breakdown",
-        "Unreal Niagara water particles impact effect",
-        "Unity VFX Graph water splash tutorial showcase",
-        "realistic ocean wave foam game shader VFX",
-        "stylized water magic spell particle effect",
-        "waterfall water stream particle VFX breakdown",
-        "Houdini water simulation game realtime VFX",
-        "water ripple caustics shader graph game demo"
+        "stylized wind VFX air slash game effect breakdown",
+        "Unreal Niagara wind vortex tornado particle tutorial",
+        "Unity VFX Graph wind gust particles demonstration",
+        "wind magic spell air slash effect VFX showcase",
+        "stylized whirlwind wind ribbon game VFX",
+        "Houdini wind debris simulation game effects",
+        "Niagara air distortion curl noise wind trail VFX",
+        "wind blowing leaves grass particle shader breakdown"
       ]
     }
   },
