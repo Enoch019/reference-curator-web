@@ -2,7 +2,7 @@
   "use strict";
 
   var REPO = "https://github.com/Enoch019/reference-curator-web";
-  var SOURCES = ["artstation", "pinterest", "behance", "flickr"];
+  var SOURCES = ["artstation", "pinterest", "behance", "flickr", "youtube"];
   var TEXT_FIELDS = ["label", "direction", "period", "architecture", "materials", "lighting", "palette"];
   var DEFAULT_ROLES = {
     silhouette: "Wide-angle view emphasizing overall form, silhouette and spatial hierarchy.",
@@ -20,7 +20,8 @@
         artstation: ["gothic castle environment concept art"],
         pinterest: ["medieval gothic castle photography"],
         behance: ["gothic architecture environment design"],
-        flickr: ["medieval stone castle photography"]
+        flickr: ["medieval stone castle photography"],
+        youtube: []
       }
     },
     vision: {enabled: true, max_candidates: 7},
@@ -74,7 +75,7 @@
       include: [], exclude: [], roles: clone(DEFAULT_ROLES),
       vision_strictness: "balanced",
       artstation: [name + " environment art"], pinterest: [name + " architecture reference"],
-      behance: [], flickr: []
+      behance: [], flickr: [], youtube: []
     };
   }
 
@@ -250,7 +251,7 @@
     var queryCount = activeSources.reduce(function (sum, source) { return sum + p[source].length; }, 0);
     el("reviewName").textContent = p.label || "—";
     el("reviewId").textContent = value("topicId") || state.selectedId;
-    el("reviewSources").textContent = activeSources.length + " / 4";
+    el("reviewSources").textContent = activeSources.length + " / " + SOURCES.length;
     el("reviewQueries").textContent = queryCount + " SEARCH QUERIES";
     el("reviewVision").textContent = state.cfg.vision.enabled ? "ENABLED" : "DISABLED";
     el("reviewStrictness").textContent = String(p.vision_strictness || "balanced").toUpperCase() + " · " + state.cfg.vision.max_candidates + " CANDIDATES";
