@@ -1,0 +1,57 @@
+name: Request Discord reference test
+run-name: 'TEST DISCORD / ${{ inputs.topic_id }}'
+
+on:
+  workflow_dispatch:
+    inputs:
+      topic_id:
+        description: 'Paste the Topic ID from the web dashboard'
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate GitHub editor and saved topic
+        env:
+          TOPIC_ID: ${{ inputs.topic_id }}
+          REQUEST_ACTOR: ${{ github.actor }}
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          # The GitHub UI already requires write access for workflow_dispatch.
+          # Check again so the private collector only accepts successful runs.
+          permission="$(gh api "repos/$GITHUB_REPOSITORY/collaborators/$REQUEST_ACTOR/permission" --jq '.permission')"
+          case "$permission" in
+            admin|write|maintain|push)
+              echo "Authorized editor: $REQUEST_ACTOR"
+              ;;
+            *)
+              echo "::error::Write access is required to test Discord delivery."
+              exit 1
+              ;;
+          esac
+          python - <<'PY'
+          import json
+          import os
+          import re
+          from pathlib import Path
+
+          topic_id = os.environ["TOPIC_ID"]
+          if not re.fullmatch(r"[a-z][a-z0-9_]{2,63}", topic_id):
+              raise SystemExit("::error::Invalid topic ID")
+          config = json.loads(Path("config.json").read_text(encoding="utf-8"))
+          topic = config.get("topics", {}).get(topic_id)
+          if not isinstance(topic, dict):
+              raise SystemExit("::error::Topic ID is not saved. Save first, then test.")
+          if not any(topic.get(source) for source in ("artstation", "pinterest", "behance", "flickr")):
+              raise SystemExit("::error::Selected topic has no search queries")
+          print(f"[TEST] Request approved for saved topic: {topic_id}")
+          print("[TEST] Private collector checks public workflow runs periodically (~15 minutes).")
+          PY
