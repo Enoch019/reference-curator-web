@@ -1,5 +1,5 @@
 {
-  "active_topic": "coastal_cliffs",
+  "active_topic": "moody_painterly_3d_rendering",
   "max_results": 3,
   "minimum_image_width": 480,
   "minimum_image_height": 320,
@@ -220,6 +220,91 @@
         "pixel art sprite sheet VFX breakdown",
         "retro RPG battle pixel effects showcase",
         "pixel game juice hit impact effects"
+      ]
+    },
+    "moody_painterly_3d_rendering": {
+      "label": "어두운 시네마틱 · 회화적 3D 렌더링",
+      "direction": "Curate distinctive STYLIZED 3D ENVIRONMENT RENDERS that feel like a dark painterly cinematic illustration. The reference mood is a storm-darkened naval diorama on a nearly black sea: high three-quarter camera, large readable simplified forms, cold charcoal and slate-blue colors, layered atmospheric haze, speckled sea spray, soft painterly textures and restrained wet highlights. This is a RENDERING/ART-DIRECTION topic, not a request for aircraft carriers. Include varied environments such as coastal/industrial architecture, islands, urban ruins, vehicles in environments, fantasy landscapes and sci-fi sets when they share this treatment. Prioritize finished 3D artwork, lighting studies, look-development breakdowns and environment art portfolios. The scene should remain legible in spite of dramatic darkness. Seek style and technique, not recurring copies of the same subject.",
+      "fantasy_intensity": 1,
+      "period": "Any era or genre: contemporary industrial, historical, naval, fantasy or subtle sci-fi. Subject is secondary to the painterly stylized 3D rendering approach.",
+      "architecture": "Strong, blocky but carefully art-directed silhouettes; modular architectural or vehicle shapes; readable planes; miniature/diorama-like composition; elevated three-quarter camera, wide cinematic framing and depth layering. Painterly concept-art finish over simplified 3D geometry, without plastic toy proportions.",
+      "materials": "Hand-painted or painterly PBR materials, soft rough surfaces, selectively wet reflective edges, distressed metal or concrete, rock and dark ocean, textured brush-stroke breakup, subtle grunge, atmospheric particles and spindrift. Detail should support broad shapes rather than compete with them.",
+      "lighting": "Very low-key cinematic lighting; cloudy dusk, storm, twilight or night; diffuse cool ambient bounce; soft directional highlights and deep near-black shadows; volumetric fog, sea spray or drifting particles; localized pale highlights and tiny warm light accents for readable depth.",
+      "palette": "Very restrained desaturated charcoal, near-black navy, blue-gray, steel/slate gray, muted teal and a little pale mist-gray; sparse washed-out amber or cream highlights. No saturated cyan, purple, candy colors or intense bloom.",
+      "include": [
+        "dark atmospheric stylized 3D environment render",
+        "painterly 3D environment art and illustrative shader treatment",
+        "cinematic low-key lighting and desaturated cool palette",
+        "moody 3D diorama composition with strong silhouettes",
+        "volumetric fog, atmospheric depth and soft haze",
+        "rain-wet surfaces, ocean mist or spray where appropriate",
+        "subtle hand-painted textures and textured shading",
+        "industrial, coastal, urban, fantasy and sci-fi scenes with matching rendering style",
+        "lighting and material look-development breakdowns",
+        "finished Blender, Unreal, Unity or other genuine 3D scene renders",
+        "dark environments that keep major forms readable"
+      ],
+      "exclude": [
+        "AI-generated images when identifiable from disclosed metadata",
+        "photography or photorealistic 3D renders with no painterly stylization",
+        "bright saturated cartoon art, vibrant low-poly mobile-game aesthetics",
+        "plastic miniature toys, clay renders and cute chibi proportions",
+        "pure 2D illustrations without a useful 3D rendering connection",
+        "flat unlit viewport screenshots and wireframe-only demos",
+        "cyberpunk neon lighting, excessive bloom and glowing rainbow effects",
+        "extremely crushed blacks where the scene is unreadable",
+        "generic aircraft carrier photos or military weapon references lacking rendering relevance",
+        "repetitive ocean or military scenes that fail to diversify environment subjects",
+        "unrelated moodboards, stock art and interface screenshots"
+      ],
+      "roles": {
+        "silhouette": "Choose a finished stylized 3D environment render with a clear three-quarter or wide cinematic composition. Assess chunky simplified forms, subject/environment scale, negative space, focal placement and strong layered dark silhouettes. Do not require naval imagery.",
+        "architecture": "Choose production-useful art direction or a 3D lighting/material breakdown: hand-painted surface response, simplified geometry, fog layers, restrained specular reflection, particles or scene construction. It must visibly share the dark painterly visual language.",
+        "atmosphere": "Choose a compelling complete 3D scene dominated by subtle cool blue-gray or charcoal tones, twilight/storm lighting, fog or mist, cinematic contrast and deep but readable shadows. Prefer emotional atmosphere over subject identity."
+      },
+      "vision_strictness": "balanced",
+      "artstation": [
+        "dark moody stylized 3d environment art painterly",
+        "cinematic stylized 3d environment art blue gray fog",
+        "painterly 3d diorama atmospheric lighting environment",
+        "dark atmospheric stylized environment unreal engine artstation",
+        "stylized industrial environment 3d moody rainy",
+        "painterly ocean storm 3d environment render",
+        "stylized 3d environment lighting study overcast blue",
+        "hand painted texture moody 3d environment art"
+      ],
+      "pinterest": [
+        "dark painterly 3d environment render",
+        "moody stylized 3d environment blue gray art",
+        "cinematic diorama 3d environmental art fog",
+        "stylized 3d sea storm atmosphere render",
+        "dark industrial stylized 3d environment lighting",
+        "illustrative 3d landscape art atmospheric perspective",
+        "hand painted stylized 3d game environment mood",
+        "desaturated 3d environment art mist rain"
+      ],
+      "behance": [
+        "painterly stylized 3d environment design rendering",
+        "dark atmospheric cinematic 3d environment artwork",
+        "stylized 3d diorama environment art fog lighting",
+        "hand painted 3d environment art direction breakdown",
+        "moody overcast 3d environment render",
+        "stylized cinematic environment lighting lookdev"
+      ],
+      "flickr": [
+        "dark stylized 3d environment render",
+        "3d diorama environment atmospheric digital art",
+        "painterly 3d illustration landscape dark",
+        "cinematic stylized 3d render fog",
+        "3d environmental artwork mist dusk"
+      ],
+      "youtube": [
+        "dark stylized 3D environment lighting breakdown Blender",
+        "painterly 3D environment render tutorial",
+        "cinematic moody stylized environment art Unreal Engine",
+        "stylized 3D diorama fog atmospheric lighting breakdown",
+        "hand painted 3D environment material lighting workflow",
+        "dark cinematic Blender environment render stylized"
       ]
     }
   },
