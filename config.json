@@ -1,5 +1,5 @@
 {
-  "active_topic": "moody_painterly_3d_rendering",
+  "active_topic": "retro_futurism",
   "max_results": 3,
   "minimum_image_width": 480,
   "minimum_image_height": 320,
@@ -305,6 +305,100 @@
         "stylized 3D diorama fog atmospheric lighting breakdown",
         "hand painted 3D environment material lighting workflow",
         "dark cinematic Blender environment render stylized"
+      ]
+    },
+    "retro_futurism": {
+      "label": "레트로 퓨처리즘 · 아톰펑크 · 카세트 퓨처리즘",
+      "direction": "Curate visually distinctive RETROFUTURISM references for game environment art, art direction and 3D asset design. Explore how people from the 1950s through the 1980s imagined the future: optimistic Atomic Age and Googie architecture, 1960s–70s space-age and analog science fiction, and tactile 1970s–80s cassette futurism. Find inspiring but buildable environments, architecture, vehicles, equipment, interiors and graphic interfaces. Prioritize original artist portfolios, physical design references, film production design, substantial 3D art and informative breakdowns. Vary the three delivered images across overall silhouettes, construction/material details, and atmospheric composition; do not collapse everything into one franchise or one color palette.",
+      "fantasy_intensity": 1,
+      "period": "Imagined futures from mid-20th-century (1950s–1960s Atomic Age / Space Age) to 1970s–1980s analog sci-fi and cassette futurism; retro visions of space exploration, cities, transit, architecture and technology.",
+      "architecture": "Googie and Space Age architecture, sweeping aerodynamic curves, domes, cantilevers, observation decks and modular space stations; monolithic retro-sci-fi infrastructure, cockpit layouts, analog control rooms, chunky spacecraft and plausible industrial details. Balance optimistic clean futurism with weathered, lived-in retro space exploration.",
+      "materials": "Brushed aluminum, chrome, enamel, painted steel, fiberglass, molded plastic, bakelite, rubber, leather, vinyl, warm wood, colored glass, CRT screens, mechanical switches, rotary knobs, tactile buttons, analog dials and practical model miniatures; readable surfaces and assembly details.",
+      "lighting": "Warm optimistic daylight and crisp commercial-illustration lighting for Atomic Age scenes; dramatic practical lights, tungsten and CRT glow, deep space shadows, hazy miniature photography and cinematic soft bounce for cassette futurism. Preserve form and material readability.",
+      "palette": "Flexible period-appropriate palettes: cream, ivory, coral, teal, mint, mustard, warm orange, red and chrome for mid-century optimism; desaturated beige, olive, tobacco brown, steel gray and restrained amber/cyan CRT accents for analog 1970s–80s sci-fi. Not generic neon-purple synthwave.",
+      "include": [
+        "1950s Atomic Age and Googie future architecture",
+        "1960s and 1970s Space Age concept design",
+        "retrofuturist sci-fi environment art and 3D scenes",
+        "cassette futurism analog spacecraft and cockpits",
+        "retro sci-fi industrial interiors and control rooms",
+        "vintage future transportation and space vehicles",
+        "retro computer terminals CRT displays and analog interfaces",
+        "tactile knobs switches dials and utilitarian prop design",
+        "mid-century product design and futuristic furniture",
+        "practical miniatures production design and architectural details",
+        "readable shape language composition and material breakdowns",
+        "original artist portfolios and authentic historic design references"
+      ],
+      "exclude": [
+        "generic cyberpunk neon megacity without period design cues",
+        "pure synthwave vaporwave gradients or neon grids",
+        "steampunk Victorian machinery as the dominant aesthetic",
+        "contemporary sleek Apple-like minimalist technology",
+        "random vintage posters without future design elements",
+        "generic modern NASA photos without retro design relevance",
+        "unrelated anime characters and fan art",
+        "blurry low resolution screenshots and low effort collages",
+        "product advertisements or search result interfaces",
+        "AI-generated works when explicitly disclosed as such",
+        "near-duplicate shots from a single movie or game",
+        "imagery lacking identifiable retrofuturist visual language"
+      ],
+      "roles": {
+        "silhouette": "Choose a striking retrofuturist overall composition or object silhouette: Googie building, utopian future city, orbital station, domed habitat, rocket, train or spacecraft. Show the period-inspired geometry, scale, proportion and readable main forms; prefer useful environmental or design references.",
+        "architecture": "Choose a practical close or medium shot revealing retro-tech design logic: analog cockpit, cassette-futurist interior, CRT console, modular wall systems, switches, materials, joinery, furniture or a film/3D production breakdown. Surface detail and construction must be clear.",
+        "atmosphere": "Choose an evocative complete retro-future scene, ranging from hopeful Atomic Age optimism to grounded analog-space melancholy. Favor confident period color, beautiful composition, purposeful lighting and cinematic environmental storytelling; avoid generic neon cyberpunk."
+      },
+      "vision_strictness": "balanced",
+      "artstation": [
+        "retrofuturism environment concept art 3D",
+        "atomic age space age retro futuristic city environment",
+        "cassette futurism sci fi interior environment art",
+        "retro futuristic spaceship cockpit analog controls 3d",
+        "mid century retro futuristic architecture game environment",
+        "1970s 1980s analog sci fi spacecraft concept design",
+        "retrofuturistic vehicle industrial design 3d render",
+        "retro sci fi control room environment breakdown"
+      ],
+      "pinterest": [
+        "1950s 1960s atomic age retrofuturism architecture",
+        "Googie architecture space age futuristic building",
+        "retrofuturism concept art environment design",
+        "cassette futurism spaceship interior analog cockpit",
+        "1970s sci fi production design analog computers",
+        "retro future city train rocket vehicle concept art",
+        "mid century futuristic furniture product design",
+        "retrofuturist CRT console mechanical switches dials"
+      ],
+      "behance": [
+        "retrofuturism 3d environment art direction",
+        "atomic age futuristic architecture concept design",
+        "cassette futurism retro sci fi environment",
+        "space age industrial design retro futuristic vehicles",
+        "retrofuturist cockpit analog UI 3d modeling",
+        "mid century future city illustration and 3D",
+        "retro sci fi set design lighting look development",
+        "retrofuturistic control room environment breakdown"
+      ],
+      "flickr": [
+        "Googie architecture mid century space age",
+        "1960s world fair futurist pavilion",
+        "retro futuristic architecture atomic age photography",
+        "vintage spacecraft cockpit analog control panel",
+        "1970s computer mainframe control room",
+        "mid century futuristic transportation concept",
+        "1960s futuristic interior design photography",
+        "vintage space age industrial design exhibitions"
+      ],
+      "youtube": [
+        "retrofuturism environment art 3d breakdown",
+        "cassette futurism spaceship cockpit blender modeling",
+        "atomic age retro futuristic architecture 3D art",
+        "retro science fiction analog interface design breakdown",
+        "1970s sci fi film production design retro futurism",
+        "Googie architecture space age design history",
+        "retro futuristic environment unreal engine showcase",
+        "cassette futurism sci fi control room 3d render"
       ]
     }
   },
